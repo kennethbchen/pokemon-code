@@ -1,9 +1,10 @@
 {
-    "name": "pokemon-code",
-    "displayName": "pokemon-code",
+    "name": "pokemon-code-fork",
+    "displayName": "pokemon-code (fork)",
     "description": "Catch Pokemon in augmented code-reality",
     "version": "0.0.4",
-    "publisher": "mattkremer",
+    "repository": "https://github.com/kennethbchen/pokemon-code",
+    "publisher": "kennethbchen",
     "engines": {
         "vscode": "^1.10.0"
     },
@@ -15,16 +16,20 @@
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.startPokemonCode",
-            "title": "Pokemon Code - Start"
-        },{
-            "command": "extension.showPokemon",
-            "title": "Pokemon Code - Pokedex"
-        },{
-            "command": "extension.showInventory",
-            "title": "Pokemon Code - Inventory"
-        }]
+        "commands": [
+            {
+                "command": "extension.startPokemonCode",
+                "title": "Pokemon Code - Start"
+            },
+            {
+                "command": "extension.showPokemon",
+                "title": "Pokemon Code - Pokedex"
+            },
+            {
+                "command": "extension.showInventory",
+                "title": "Pokemon Code - Inventory"
+            }
+        ]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",

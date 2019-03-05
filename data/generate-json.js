@@ -12,7 +12,7 @@ function capitalizeFirstLetter(string) {
 var parser = parse({delimiter: ','}, function (err, data) {
   async.eachSeries(data, function (line, callback) {
     // do something with the line
-    if (parseInt(line[2]) < 152 && line[7] == '1'){
+    if (parseInt(line[2]) < 809 && line[7] == '1'){
         pokemon[line[2]] = {
             name: capitalizeFirstLetter(line[1]),
             exp: parseInt(line[5])
@@ -24,6 +24,5 @@ var parser = parse({delimiter: ','}, function (err, data) {
 })
 fs.createReadStream(inputFile).pipe(parser).on('end',function() {
     //do something wiht csvData
-    console.log(pokemon);
     fs.writeFile('pokemon.json', JSON.stringify(pokemon));
 });;
